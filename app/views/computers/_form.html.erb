@@ -1,0 +1,61 @@
+<%= form_for(@computer) do |f| %>
+  <% if @computer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@computer.errors.count, "error") %> prohibited this computer from being saved:</h2>
+
+      <ul>
+      <% @computer.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :model %><br />
+    <%= f.text_field :model %>
+  </div>
+  <div class="field">
+    <%= f.label :so %><br />
+    <%= f.text_field :so %>
+  </div>
+  <div class="field">
+    <%= f.label :processor %><br />
+    <%= f.text_field :processor %>
+  </div>
+  <div class="field">
+    <%= f.label :memory %><br />
+    <%= f.text_field :memory %>
+  </div>
+  <div class="field">
+    <%= f.label :graphics %><br />
+    <%= f.text_field :graphics %>
+  </div>
+  <div class="field">
+    <%= f.label :hard_disk %><br />
+    <%= f.text_field :hard_disk %>
+  </div>
+  <div class="field">
+    <%= f.label :display %><br />
+    <%= f.text_field :display %>
+  </div>
+  <div class="field">
+    <%= f.label :serial %><br />
+    <%= f.text_field :serial %>
+  </div>
+  <div class="field">
+    <%= f.label :programs %><br />
+    <%= f.text_field :programs %>
+  </div>
+  <div class="field">
+    <%= f.label :area %><br />
+    <%= f.text_field :area %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

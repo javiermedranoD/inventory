@@ -1,0 +1,43 @@
+<h1>Listing computers</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Model</th>
+    <th>So</th>
+    <th>Processor</th>
+    <th>Memory</th>
+    <th>Graphics</th>
+    <th>Hard disk</th>
+    <th>Display</th>
+    <th>Serial</th>
+    <th>Programs</th>
+    <th>Area</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @computers.each do |computer| %>
+  <tr>
+    <td><%= computer.name %></td>
+    <td><%= computer.model %></td>
+    <td><%= computer.so %></td>
+    <td><%= computer.processor %></td>
+    <td><%= computer.memory %></td>
+    <td><%= computer.graphics %></td>
+    <td><%= computer.hard_disk %></td>
+    <td><%= computer.display %></td>
+    <td><%= computer.serial %></td>
+    <td><%= computer.programs %></td>
+    <td><%= computer.area %></td>
+    <td><%= link_to 'Show', computer %></td>
+    <td><%= link_to 'Edit', edit_computer_path(computer) %></td>
+    <td><%= link_to 'Destroy', computer, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Computer', new_computer_path %>
